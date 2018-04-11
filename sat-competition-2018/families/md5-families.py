@@ -28,6 +28,8 @@ def md5_families_args():
     r_args = sys.argv[1:]
     if run:
         r_args = r_args[1:]
+    if release:
+        r_args = r_args[1:]
 
     r = int(r_args[0])
     p = int(r_args[1])
