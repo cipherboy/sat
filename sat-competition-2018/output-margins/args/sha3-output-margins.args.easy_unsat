@@ -1,0 +1,10 @@
+4 t-r-p-c 92 100 0 44 # sha3 UNSAT 79039
+8 t-r-p-c 47 200 0 196 # sha3 UNSAT 79000
+8 t-r-p-c 157 200 0 197 # sha3 UNSAT 78881
+8 t-r-p-c 181 200 0 165 # sha3 UNSAT 78697
+8 t-r-p-c 176 200 0 191 # sha3 UNSAT 77808
+8 t-r-p-c 178 200 0 175 # sha3 UNSAT 77388
+4 t-r-p-c 77 100 0 86 # sha3 UNSAT 76603
+8 t-r-p-c 177 200 0 186 # sha3 UNSAT 76200
+8 t-r-p-c 182 200 0 167 # sha3 UNSAT 76160
+4 t-r-p-c 70 100 0 95 # sha3 UNSAT 75250
