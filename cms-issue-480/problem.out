@@ -1,0 +1,187 @@
+c Outputting solution to console
+c CryptoMiniSat version 5.2.1
+c CryptoMiniSat SHA revision a7052c4415965ce65f273a7fd2d88508ac1fcf05
+c CryptoMiniSat compilation env CMAKE_CXX_COMPILER = /usr/bin/c++ | CMAKE_CXX_FLAGS =  -Wall -Wextra -Wunused -Wsign-compare -fno-omit-frame-pointer -Wtype-limits -Wuninitialized -Wno-deprecated -Wstrict-aliasing -Wpointer-arith -fvisibility=hidden -Wpointer-arith -Wformat-nonliteral -Winit-self -Wparentheses -Wunreachable-code -ggdb3 -Wlogical-op -Wrestrict -Wnull-dereference -Wdouble-promotion -Wshadow -Wformat=2 -pedantic | COMPILE_DEFINES =  -DBOOST_TEST_DYN_LINK -DUSE_ZLIB -DUSE_M4RI | STATICCOMPILE = OFF | ONLY_SIMPLE = OFF | Boost_FOUND = 1 | STATS = OFF | SQLITE3_FOUND =  | ZLIB_FOUND = TRUE | VALGRIND_FOUND = FALSE | ENABLE_TESTING = OFF | M4RI_FOUND = TRUE | SLOW_DEBUG = OFF | ENABLE_ASSERTIONS = ON | PYTHON_EXECUTABLE = /usr/bin/python3 | PYTHON_LIBRARY = /usr/lib/x86_64-linux-gnu/libpython3.6m.so | PYTHON_INCLUDE_DIRS = /usr/include/python3.6m | MY_TARGETS =  | LARGEMEM = OFF | LIMITMEM = OFF | compilation date time = Mar 27 2018 11:10:40
+c compiled with gcc version 7.2.0
+c Executed with command line: /home/cipherboy/tools/cryptominisat5 ./problem.cnf
+c Reading file './problem.cnf'
+c -- header says num vars:          29695
+c -- header says num clauses:       94147
+c -- clauses added: 94147
+c -- xor clauses added: 0
+c -- vars added 29695
+c Parsing time: 0.10 s
+c --> Executing strategy token: sub-impl
+c [impl sub] bin: 0 tri: 0 (stamp: 0, cache: 0) T: 0.01 T-out: N w-visit: 59390
+c --> Executing OCC strategy token(s): 'occ-backw-sub-str,occ-clean-implicit,occ-bve,occ-backw-sub-str,occ-xor,'
+c [occ] mem usage for occur      4 MB
+c [occ] mem usage for occur      2 MB
+c Mem for watch alloc      : 2           MB (11.18     %)
+c Mem for watch array      : 1           MB (6.77      %)
+c --> Executing OCC strategy token: occ-backw-sub-str
+c [occ-backw-sub-str-long-w-bins] upI: 47311 subs w bin: 0 str w bin: 0 tried: 81976 str: 0 0-depth ass: 0 T: 0.02 T-out: N T-r: 99.20%
+c [occ-sub-long-w-long] rem cl: 0 tried: 100294/50147 (200.0%) T: 0.05 T-out: N T-r: 98.05%
+c [occ-sub-str-long-w-long] sub: 0 str: 0 tried: 150441/50147 (300.0)  T: 0.10 T-out: N T-r: 92.79%
+c --> Executing OCC strategy token: occ-clean-implicit
+c --> Executing OCC strategy token: occ-bve
+c [occ-empty-res] Empty resolvent elimed: 432 T: 0.01 T-out: N
+c [occ-bve] iter v-elim 16870
+c cl_inc_rate=0.7, var_dec_rate=2.4 (grow=0)
+c Reduced to 11648 vars, 62463 cls (grow=0)
+c [occ-bve] iter v-elim 1071
+c cl_inc_rate=1.0, var_dec_rate=1.1 (grow=8)
+c Reduced to 10577 vars, 63819 cls (grow=8)
+c x n vars       : 10577
+c  #try to eliminate:    53K
+c  #var-elim        :  17941
+c  #T-o: N
+c  #T-r: 99.92%
+c  #T  : 0.68
+c [occur] 0.02 is overhead
+c [occur] link-in T: 0.02 cleanup T: 0.00
+c --> Executing OCC strategy token: occ-backw-sub-str
+c [occ-backw-sub-str-long-w-bins] upI: 37984 subs w bin: 0 str w bin: 0 tried: 90551 str: 0 0-depth ass: 0 T: 0.01 T-out: N T-r: 99.95%
+c [occ-sub-long-w-long] rem cl: 0 tried: 268960/134480 (200.0%) T: 0.10 T-out: N T-r: 95.60%
+c [occ-sub-str-long-w-long] sub: 0 str: 0 tried: 403440/134480 (300.0)  T: 0.22 T-out: N T-r: 88.58%
+c --> Executing OCC strategy token: occ-xor
+c [occ-xor] found   4179 avg sz  3.7 T: 0.06 T-out: N
+c Sum vars in blocks: 10387
+c [occ-xor] cut into 13 blcks.  Vars in blcks: 10387 T: 0.00
+c [occ-xor] extr info.  unit: 0 bin: 0 0-depth-ass: 0 T: 0.00
+c --> Executing strategy token: scc-vrepl
+c [scc] new: 582 BP 0M T: 0.01
+c [vrep] vars 578 lits 22677 rem-bin-cls 2320 rem-long-cls 0 BP 0M T: 0.02
+c --> Executing strategy token: sub-cls-with-bin
+c [distill-with-bin-ext] stamp-based lit-rem: 0 inv-lit-rem: 0 stamp-cl-rem: 0
+c [distill-with-bin-ext] bin-based lit-rem: 0 cl-sub: 0
+c [distill-with-bin-ext] cache-based lit-rem: 0 cl-sub: 0
+c [distill-with-bin-ext] T: 0.06 T-out: N T-r: 97.47%
+c [distill] cache-based irred--  cl tried    62145 cl-sh     0 cl-rem    0 lit-rem      0 T: 0.06 T-out: N
+c [distill] cache-based   red--  cl tried        0 cl-sh     0 cl-rem    0 lit-rem      0 T: 0.00 T-out: N
+c [consolidate] T: 0.00
+c   type VSIDS  rest  conf freevar  IrrL  IrrB l/longC  l/allC RedL0 RedL1 RedL2  RedB l/longC  l/allC
+c [distill] long cls tried: 4/4 cl-short:8 lit-r:0 T: 0.00 T-out: N T-r: 100.00%
+c [distill] long useful: 8/4/4 lits-rem: 0 0-depth-assigns: 0 T: 0.00 T-out: N
+c [distill] long cls tried: 1617/1313 cl-short:3180 lit-r:827 T: 0.01 T-out: N T-r: 99.99%
+c [distill] long useful: 3180/1617/1621 lits-rem: 827 0-depth-assigns: 0 T: 0.01 T-out: N
+c   glue     1    33  4097    9999   62K   518    3.49    3.48  1739   941   731   474    8.33    7.56
+c [distill] long cls tried: 1838/2743 cl-short:3613 lit-r:966 T: 0.01 T-out: N T-r: 99.99%
+c [distill] long useful: 3613/1838/3151 lits-rem: 966 0-depth-assigns: 0 T: 0.01 T-out: N
+c   geom     1    70  8194    9999   62K   518    3.49    3.48  3249  2019  1474  1030    8.01    7.21
+c [distill] long cls tried: 2509/4667 cl-short:4930 lit-r:2152 T: 0.02 T-out: N T-r: 99.98%
+c [distill] long useful: 4930/2509/5252 lits-rem: 2152 0-depth-assigns: 0 T: 0.02 T-out: N
+c   geom     1    97 12291    9999   62K   518    3.49    3.48  4735  2793  2414  1713    8.32    7.39
+c   glue     1   118 16388    9999   62K   518    3.49    3.48  6385  4047  1920  1812    7.29    6.61
+c [distill] long cls tried: 2380/6459 cl-short:4698 lit-r:1838 T: 0.02 T-out: N T-r: 99.98%
+c [distill] long useful: 4698/2380/7047 lits-rem: 1838 0-depth-assigns: 1 T: 0.02 T-out: N
+c   geom     1   140   20K    9998   62K   518    3.49    3.48  7878  4761  2954  2482    7.73    6.95
+c [distill] long cls tried: 3068/8981 cl-short:6045 lit-r:2241 T: 0.03 T-out: N T-r: 99.97%
+c [distill] long useful: 6045/3068/9527 lits-rem: 2241 0-depth-assigns: 0 T: 0.03 T-out: N
+c   glue     1   158   24K    9998   62K   518    3.49    3.48  9149  5817  3900  3132    7.85    7.02
+c   geom     1   177   28K    9998   62K   518    3.49    3.48 10302  6707  5701  3196    9.01    8.14
+c [distill] long cls tried: 2975/11441 cl-short:5827 lit-r:1792 T: 0.03 T-out: N T-r: 99.97%
+c [distill] long useful: 5827/2975/11956 lits-rem: 1792 0-depth-assigns: 0 T: 0.03 T-out: N
+c   glue     1   193   32K    9998   62K   518    3.49    3.48 11566  7472  4113  3793    8.48    7.57
+c   glue     1   217   36K    9998   62K   518    3.49    3.48 12730  8582  5660  3861    8.96    8.09
+c   glue     1   236   40K    9998   62K   518    3.49    3.48 14482  7337  9019  3925    9.33    8.50
+c [distill] long cls tried: 3187/14122 cl-short:6185 lit-r:1572 T: 0.05 T-out: N T-r: 99.91%
+c [distill] long useful: 6185/3187/14628 lits-rem: 1572 0-depth-assigns: 0 T: 0.05 T-out: N
+c   glue     1   251   45K    9998   62K   518    3.49    3.48 15221  8546  5468  4497    7.66    6.91
+c   geom     1   267   49K    9998   62K   518    3.49    3.48 16484  9623  7015  4562    8.19    7.44
+c [distill] long cls tried: 4030/17748 cl-short:7894 lit-r:1489 T: 0.06 T-out: N T-r: 99.88%
+c [distill] long useful: 7894/4030/18152 lits-rem: 1489 0-depth-assigns: 0 T: 0.06 T-out: N
+c   glue     1   291   53K    9998   62K   518    3.49    3.48 17800  8247 10582  5017    8.47    7.69
+c   glue     1   310   57K    9998   62K   518    3.49    3.48 18962  9339 12162  5075    8.78    8.02
+c   glue     1   326   61K    9998   62K   518    3.49    3.48   20K  8378  8928  5120    7.54    6.88
+c   glue     1   337   65K    9998   62K   518    3.49    3.48   21K  9530 10753  5154    8.49    7.78
+c [distill] long cls tried: 4189/21255 cl-short:8237 lit-r:2625 T: 0.08 T-out: N T-r: 99.84%
+c [distill] long useful: 8237/4189/21937 lits-rem: 2625 0-depth-assigns: 0 T: 0.08 T-out: N
+c   glue     1   349   69K    9997   62K   518    3.49    3.48   21K 10724 12336  5871    8.88    8.09
+c recursive minimization cost OK: 380Kcost/(% lits removed)
+c more minimization effectiveness low: 0.00 % lits removed --> disabling
+c --> Executing strategy token: handle-comps
+c --> Executing strategy token: scc-vrepl
+c [scc] new: 745 BP 0M T: 0.00
+c [vrep] vars 745 lits 71319 rem-bin-cls 7010 rem-long-cls 5181 BP 0M T: 0.05
+c --> Executing strategy token: cache-clean
+c [cache] cleaned. Updated:       0 K Cleaned:       0 K Freed:       0 K T: 0.00
+c --> Executing strategy token: cache-tryboth
+c [bcache]  0-depth ass: 87 BXprop: 0 T: 0.00
+c --> Executing strategy token: sub-impl
+c [impl sub] bin: 326 tri: 0 (stamp: 0, cache: 0) T: 0.01 T-out: N w-visit: 59390
+c --> Executing strategy token: intree-probe
+c [scc] new: 1 BP 0M T: 0.00
+c [vrep] vars 1 lits 247 rem-bin-cls 4 rem-long-cls 1 BP 0M T: 0.02
+c [scc] new: 0 BP 0M T: 0.00
+c [vrep] vars 0 lits 0 rem-bin-cls 0 rem-long-cls 0 BP 0M T: 0.02
+c [intree] Set 4 vars hyper-added: 80 trans-irred::0 trans-red::2 T: 0.08 T-out: N T-r: 99.79%
+c --> Executing strategy token: probe
+c [probe] lits : 0.58M act vars: 9.16K BP+HP todo: 5068.80M
+c [probe] 0-depth assigns: 0 bsame: 0 Flit: 0 Visited: 18156/18318(99.1%)
+c [probe] probed: 17926(97.9%) hyperBin:0 transR-Irred:0 transR-Red:3
+c [probe] BP: 2.9M HP: 0.0M T: 0.05 T-out: N T-r: 99.93%
+c [probe] time spent updating cache during probing: 0.0%
+c --> Executing strategy token: sub-str-cls-with-bin
+c [distill-with-bin-ext] stamp-based lit-rem: 0 inv-lit-rem: 0 stamp-cl-rem: 0
+c [distill-with-bin-ext] bin-based lit-rem: 0 cl-sub: 15
+c [distill-with-bin-ext] cache-based lit-rem: 0 cl-sub: 0
+c [distill-with-bin-ext] T: 0.08 T-out: N T-r: 95.98%
+c [distill-with-bin-ext] stamp-based lit-rem: 0 inv-lit-rem: 0 stamp-cl-rem: 0
+c [distill-with-bin-ext] bin-based lit-rem: 0 cl-sub: 165
+c [distill-with-bin-ext] cache-based lit-rem: 0 cl-sub: 8
+c [distill-with-bin-ext] T: 0.02 T-out: N T-r: 98.22%
+c [distill-with-bin-ext] stamp-based lit-rem: 0 inv-lit-rem: 0 stamp-cl-rem: 0
+c [distill-with-bin-ext] bin-based lit-rem: 0 cl-sub: 0
+c [distill-with-bin-ext] cache-based lit-rem: 0 cl-sub: 0
+c [distill-with-bin-ext] T: 0.11 T-out: N T-r: 90.05%
+c [distill-with-bin-ext] stamp-based lit-rem: 0 inv-lit-rem: 0 stamp-cl-rem: 0
+c [distill-with-bin-ext] bin-based lit-rem: 18 cl-sub: 0
+c [distill-with-bin-ext] cache-based lit-rem: 98 cl-sub: 0
+c [distill-with-bin-ext] T: 0.04 T-out: N T-r: 95.76%
+c [distill] cache-based irred--  cl tried   123521 cl-sh     0 cl-rem   15 lit-rem      0 T: 0.20 T-out: N
+c [distill] cache-based   red--  cl tried    39699 cl-sh   109 cl-rem  173 lit-rem    116 T: 0.06 T-out: N
+c --> Executing strategy token: distill-cls
+c [distill] long cls tried: 61753/61742 cl-short:29137 lit-r:18 T: 0.77 T-out: N T-r: 89.95%
+c [distill] long useful: 58274/123506/123506 lits-rem: 36 0-depth-assigns: 0 T: 1.54 T-out: N
+c --> Executing strategy token: scc-vrepl
+c [scc] new: 18 BP 0M T: 0.01
+c [vrep] vars 18 lits 1495 rem-bin-cls 80 rem-long-cls 59 BP 0M T: 0.02
+c --> Executing strategy token: sub-impl
+c [impl sub] bin: 26 tri: 0 (stamp: 0, cache: 0) T: 0.01 T-out: N w-visit: 59390
+c --> Executing strategy token: str-impl
+c [impl str] lit bin: 0 (by stamp: 0) set-var: 0 T: 0.00 T-out: N T-r: 99.95% w-visit: 59390
+c --> Executing strategy token: sub-impl
+c [impl sub] bin: 0 tri: 0 (stamp: 0, cache: 0) T: 0.01 T-out: N w-visit: 59390
+c --> Executing OCC strategy token(s): 'occ-backw-sub-str,occ-clean-implicit,occ-bve,occ-bva,occ-xor,'
+c [occ] mem usage for occur      3 MB
+c [occ] mem usage for occur      1 MB
+c Mem for watch alloc      : 4           MB (11.86     %)
+c Mem for watch array      : 1           MB (3.33      %)
+c --> Executing OCC strategy token: occ-backw-sub-str
+c [occ-backw-sub-str-long-w-bins] upI: 13008 subs w bin: 9 str w bin: 13 tried: 91687 str: 0 0-depth ass: 0 T: 0.01 T-out: N T-r: 99.97%
+c [occ-sub-long-w-long] rem cl: 6307 tried: 203938/101969 (200.0%) T: 0.14 T-out: N T-r: 92.40%
+c [occ-sub-str-long-w-long] sub: 41 str: 972 tried: 305907/101969 (300.0)  T: 0.34 T-out: N T-r: 86.63%
+c --> Executing OCC strategy token: occ-clean-implicit
+c --> Executing OCC strategy token: occ-bve
+c [occ-empty-res] Empty resolvent elimed: 4 T: 0.02 T-out: N
+c [occ-bve] iter v-elim 422
+c cl_inc_rate=0.9, var_dec_rate=1.0 (grow=0)
+c Reduced to 8715 vars, 54102 cls (grow=0)
+c [occ-bve] iter v-elim 315
+c cl_inc_rate=1.0, var_dec_rate=1.0 (grow=8)
+c Reduced to 8395 vars, 52065 cls (grow=8)
+c x n vars       : 8395
+c  #try to eliminate:    20K
+c  #var-elim        :    737
+c  #T-o: N
+c  #T-r: 99.95%
+c  #T  : 0.45
+c [occur] 0.08 is overhead
+c [occur] link-in T: 0.08 cleanup T: 0.00
+c --> Executing OCC strategy token: occ-bva
+c --> Executing OCC strategy token: occ-xor
+c [occ-xor] found   3424 avg sz  3.7 T: 0.10 T-out: N
+c Sum vars in blocks: 8038
+c [occ-xor] cut into 93 blcks.  Vars in blcks: 8038 T: 0.00
+c [occ-xor] extr info.  unit: 4 bin: 58 0-depth-ass: 0 T: 0.01
+not prop BIN: 20665, 20872 (red: 0
