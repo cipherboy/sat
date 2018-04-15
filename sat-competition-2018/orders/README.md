@@ -14,13 +14,12 @@ that x != f^{k}(x), where f is the particular set of round functions and f^{k} i
 itself k times. If there is such a witness, then k cannot be the order of f. See the below table of
 orders for expected orders of round functions:
 
-func        | order
--------------------
-theta       | 3w
-rho         | w
-pi          | 24
-chi         | 4
-theta ; rho | 3w
+| func        | order | difficulty |
+| ----------- | ----- | ---------- |
+| theta       | 3w    | hard w>=4  |
+| rho         | w     | easy       |
+| pi          | 24    | easy       |
+| chi         | 4     | easy       |
 
 These are all largely easy problems: when k is the order of f, then f similifies to the identity,
 leaving the model as x != x, a trivial UNSAT. Benchmarks are given for the above functions at
