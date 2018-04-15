@@ -1,4 +1,4 @@
-# SHA3 Difference Matrices
+# SHA3 Permutation Orders
 
 In this repository are arguments (in the `args` subfolder) and generators (`*.py`) used to generate
 the attached instances. Note that the generators depend on `hash_framework` (available
