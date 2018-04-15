@@ -1,0 +1,112 @@
+sha3-chi-identity-w1-rc-o4
+UNSAT
+Run time: 0.017604351043701172
+
+sha3-chi-identity-w2-rc-o4
+UNSAT
+Run time: 0.029906511306762695
+
+sha3-chi-identity-w4-rc-o4
+UNSAT
+Run time: 0.05771970748901367
+
+sha3-chi-identity-w8-rc-o4
+UNSAT
+Run time: 0.12779498100280762
+
+sha3-chi-identity-w16-rc-o4
+UNSAT
+Run time: 0.4769423007965088
+
+sha3-chi-identity-w32-rc-o4
+UNSAT
+Run time: 1.2094471454620361
+
+sha3-chi-identity-w64-rc-o4
+UNSAT
+Run time: 6.251485109329224
+
+sha3-chi-identity-w1-rc-o1
+SAT
+Run time: 0.012998580932617188
+
+sha3-chi-identity-w2-rc-o1
+SAT
+Run time: 0.011467695236206055
+
+sha3-chi-identity-w4-rc-o1
+SAT
+Run time: 0.013533592224121094
+
+sha3-chi-identity-w8-rc-o1
+SAT
+Run time: 0.01452326774597168
+
+sha3-chi-identity-w16-rc-o1
+SAT
+Run time: 0.027837514877319336
+
+sha3-chi-identity-w32-rc-o1
+SAT
+Run time: 0.03549528121948242
+
+sha3-chi-identity-w64-rc-o1
+SAT
+Run time: 0.05051136016845703
+
+sha3-chi-identity-w1-rc-o2
+SAT
+Run time: 0.011968374252319336
+
+sha3-chi-identity-w2-rc-o2
+SAT
+Run time: 0.01417684555053711
+
+sha3-chi-identity-w4-rc-o2
+SAT
+Run time: 0.013878583908081055
+
+sha3-chi-identity-w8-rc-o2
+SAT
+Run time: 0.03190255165100098
+
+sha3-chi-identity-w16-rc-o2
+SAT
+Run time: 0.04290914535522461
+
+sha3-chi-identity-w32-rc-o2
+SAT
+Run time: 0.03737187385559082
+
+sha3-chi-identity-w64-rc-o2
+SAT
+Run time: 0.06758499145507812
+
+sha3-chi-identity-w1-rc-o3
+SAT
+Run time: 0.012520074844360352
+
+sha3-chi-identity-w2-rc-o3
+SAT
+Run time: 0.012748956680297852
+
+sha3-chi-identity-w4-rc-o3
+SAT
+Run time: 0.015108823776245117
+
+sha3-chi-identity-w8-rc-o3
+SAT
+Run time: 0.022511005401611328
+
+sha3-chi-identity-w16-rc-o3
+SAT
+Run time: 0.034698486328125
+
+sha3-chi-identity-w32-rc-o3
+SAT
+Run time: 0.04915428161621094
+
+sha3-chi-identity-w64-rc-o3
+SAT
+Run time: 0.09941673278808594
+
