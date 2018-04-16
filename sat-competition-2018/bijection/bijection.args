@@ -1,0 +1,84 @@
+sha3-bijection-w1-rt
+UNSAT
+Run time: 0.08897948265075684
+sha3-bijection-w1-rr
+UNSAT
+Run time: 0.0539700984954834
+sha3-bijection-w1-rp
+UNSAT
+Run time: 0.05379033088684082
+sha3-bijection-w1-rc
+UNSAT
+Run time: 0.06318521499633789
+sha3-bijection-w2-rt
+UNSAT
+Run time: 0.07338190078735352
+sha3-bijection-w2-rr
+UNSAT
+Run time: 0.018354177474975586
+sha3-bijection-w2-rp
+UNSAT
+Run time: 0.0548856258392334
+sha3-bijection-w2-rc
+UNSAT
+Run time: 0.06966137886047363
+sha3-bijection-w4-rt
+UNSAT
+Run time: 0.35567545890808105
+sha3-bijection-w4-rr
+UNSAT
+Run time: 0.06032085418701172
+sha3-bijection-w4-rp
+UNSAT
+Run time: 0.05416250228881836
+sha3-bijection-w4-rc
+UNSAT
+Run time: 0.09232616424560547
+sha3-bijection-w8-rt
+UNSAT
+Run time: 0.7853991985321045
+sha3-bijection-w8-rr
+UNSAT
+Run time: 0.05881190299987793
+sha3-bijection-w8-rp
+UNSAT
+Run time: 0.06267237663269043
+sha3-bijection-w8-rc
+UNSAT
+Run time: 0.18912386894226074
+sha3-bijection-w16-rt
+UNSAT
+Run time: 1.2121455669403076
+sha3-bijection-w16-rr
+UNSAT
+Run time: 0.06459164619445801
+sha3-bijection-w16-rp
+UNSAT
+Run time: 0.059317827224731445
+sha3-bijection-w16-rc
+UNSAT
+Run time: 0.5403299331665039
+sha3-bijection-w32-rt
+UNSAT
+Run time: 6.787686824798584
+sha3-bijection-w32-rr
+UNSAT
+Run time: 0.07614445686340332
+sha3-bijection-w32-rp
+UNSAT
+Run time: 0.07617402076721191
+sha3-bijection-w32-rc
+UNSAT
+Run time: 2.2792086601257324
+sha3-bijection-w64-rt
+UNSAT
+Run time: 22.81816577911377
+sha3-bijection-w64-rr
+UNSAT
+Run time: 0.11594295501708984
+sha3-bijection-w64-rp
+UNSAT
+Run time: 0.10187220573425293
+sha3-bijection-w64-rc
+UNSAT
+Run time: 12.34565019607544

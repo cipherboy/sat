@@ -10,18 +10,17 @@ run = False
 release = False
 if '--run' in sys.argv:
     run = True
-elif '--release' in sys.argv:
+if '--release' in sys.argv:
     release = True
-elif '-h' in sys.argv or '--help' in sys.argv:
-    print(sys.argv[0] + " [--run] [--release] [--args file] [r p [places]]")
+if '-h' in sys.argv or '--help' in sys.argv:
+    print(sys.argv[0] + " [--run] [--release] [w r]")
     print('---')
     print("Generates models for benchmarking. Runs if specified, otherwise only creates models.")
     print("--run - runs the resulting CNF file")
     print("--release - deletes the intermediate stages after creation")
     print("--args file - specify a file to load arguments from")
-    print("r - number of rounds (multiple of 4, between 8 and 48 inclusive)")
-    print("p - number of places (0 to r inclusive)")
-    print("places - specific place (dash separated list)")
+    print("w - sha3 w")
+    print("r - sha3 round spec")
     sys.exit(0)
 
 def sha3_bijection_args():
@@ -35,10 +34,6 @@ def sha3_bijection_args():
     r = r_args[1].split('-')
     sha3_bijection(w, r)
 
-def sha3_bijection_file():
-    pass
-
-# Shows that chi^4 is the identity function
 def sha3_bijection(w, r):
     algo = hf.algorithms.sha3(w=w, rounds=r)
     tag = "sha3-bijection-w" + str(w) + "-r" + "-".join(r)
@@ -88,8 +83,4 @@ def sha3_bijection(w, r):
         print("Run time: " + str(t2))
 
 
-
-if '--args' in sys.argv:
-    sha3_bijection_file()
-else:
-    sha3_bijection_args()
+sha3_bijection_args()
