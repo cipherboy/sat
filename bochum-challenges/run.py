@@ -13,8 +13,33 @@ def polyAdd(model, left, right):
 
     for index, l_item in enumerate(left):
         r_item = right[index]
-        q, r = divmod(r_item * l_item, kyber.q)
-        model.add_assert(q < kyber.q)
+        if model:
+            l_item = model.to_vec(l_item, bits)
+            r_item = model.to_vec(r_item, bits)
+
+        q, r = divmod(l_item + r_item, kyber.q)
+
+        if model:
+            model.add_assert(q < kyber.q)
+
+        result.append(r)
+
+    return result
+
+def polySub(model, left, right):
+    assert len(left) == len(right)
+    result = []
+
+    for index, l_item in enumerate(left):
+        r_item = right[index]
+        if model:
+            l_item = model.to_vec(l_item, bits)
+            r_item = model.to_vec(r_item, bits)
+
+        q, r = divmod(l_item - r_item, kyber.q)
+
+        if model:
+            model.add_assert(q < kyber.q)
 
         result.append(r)
 
@@ -26,8 +51,15 @@ def polyMul(model, left, right):
 
     for index, l_item in enumerate(left):
         r_item = right[index]
-        q, r = divmod(r_item * l_item, kyber.q)
-        model.add_assert(q < kyber.q)
+
+        if model:
+            l_item = model.to_vec(l_item, bits)
+            r_item = model.to_vec(r_item, bits)
+
+        q, r = divmod(l_item * r_item, kyber.q)
+
+        if model:
+            model.add_assert(q < kyber.q)
 
         result.append(r)
 
@@ -40,6 +72,16 @@ def polyVecAdd(model, left, right):
     for index, l_item in enumerate(left):
         r_item = right[index]
         result.append(polyAdd(model, l_item, r_item))
+
+    return result
+
+def polyVecSub(model, left, right):
+    assert len(left) == len(right)
+    result = []
+
+    for index, l_item in enumerate(left):
+        r_item = right[index]
+        result.append(polySub(model, l_item, r_item))
 
     return result
 
@@ -82,6 +124,30 @@ def polyVecPrint(vec):
         result.append(i)
     return result
 
+def msgPolyPrint(poly):
+    bits = []
+    q2 = kyber.q // 2
+    for bit in poly:
+        if bit > q2:
+            if (kyber.q - bit) > (bit - q2):
+                bit = 0
+            elif (kyber.q - bit) < (bit - q2):
+                bit = 1
+            else:
+                assert False
+        else:
+            if bit > (q2 - bit):
+                bit = 1
+            elif bit < (q2 - bit):
+                bit = 0
+            else:
+                assert False
+
+        bits.append(bit)
+
+    return "".join(map(str, bits))
+
+
 with cmsh.Model(threads=8) as m:
     s = varArrayPolys()
     e = varArrayPolys()
@@ -95,5 +161,21 @@ with cmsh.Model(threads=8) as m:
 
     assert m.solve()
 
-    print(f"s = {polyVecPrint(s)}")
-    print(f"e = {polyVecPrint(e)}")
+    s = polyVecPrint(s)
+    e = polyVecPrint(e)
+
+    print(f"s = {s}")
+    print(f"e = {e}")
+
+    data = []
+
+    for part in kyber.ct:
+        u, v = part
+        noisy = polySub(None, v, polyVecDot(None, s, u))
+        bits = msgPolyPrint(noisy)
+        first = int(bits[0:8], 2)
+        second = int(bits[8:], 2)
+        data.append(chr(first))
+        data.append(chr(second))
+
+    print(f"data: {data}")
